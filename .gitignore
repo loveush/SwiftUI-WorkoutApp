@@ -1,0 +1,41 @@
+# User-specific files
+*.xcuserdata
+*.xcscmblueprint
+
+# Build files
+build/
+DerivedData/
+.idea/
+
+# Logs
+*.log
+*.xcactivitylog
+
+# Temporary or swap files
+*.swp
+*.swo
+*.tmp
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode-specific files
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcworkspace
+!default.xcworkspace
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+.build/
+
+# Archives
+*.xcarchive
+
+# Environment settings
+.env
+

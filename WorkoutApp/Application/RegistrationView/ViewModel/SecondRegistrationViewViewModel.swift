@@ -5,33 +5,13 @@ import Foundation
 class SecondRegistrationViewViewModel: ObservableObject {
     @Published var user: User
     @Published var errorMessage = ""
- 
     
+    @Published var weight = ""
+    @Published var height = ""
+    @Published var name = ""
+ 
     init(user: User) {
         self.user = user
-    }
-    
-    func completeRegistration(name: String, height: Int, weight: Int) {
-        user.name = name
-        user.height = height
-        user.weight = weight
-        
-        // Try to create the user with Firebase Authentication
-        Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] result, error in
-            if let error = error {
-                print("Error creating user: \(error.localizedDescription)")
-                return
-            }
-            
-            // Ensure result is not nil and retrieve the user ID
-            guard let userId = result?.user.uid else {
-                print("Error: result is nil, user ID could not be retrieved.")
-                return
-            }
-            
-            // Call the function to insert the user record into Firestore
-            self?.insertUserRecord(id: userId)
-        }
     }
     
     private func insertUserRecord(id: String) {
@@ -43,14 +23,39 @@ class SecondRegistrationViewViewModel: ObservableObject {
                 .setData(user.asDictionary()) { error in
                     if let error = error {
                         print("Error writing user record to Firestore: \(error.localizedDescription)")
-                    } else {
-                        print("User record successfully written!")
                     }
                 }
     }
     
-    func validate(name: String, weight: String, height: String) -> Bool {
+    func completeRegistration() {
+        guard validate() else {
+            return
+        }
+        
+        user.name = self.name
+        user.height = Int(self.height)!
+        user.weight = Int(self.weight)!
+        
+        print(user)
+
+        Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] result, error in
+            if let error = error {
+                print("Error creating user: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let userId = result?.user.uid else {
+                print("Error: result is nil, user ID could not be retrieved.")
+                return
+            }
+            
+            self?.insertUserRecord(id: userId)
+        }
+    }
+    
+    private func validate() -> Bool {
         errorMessage = ""
+        
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
               !weight.trimmingCharacters(in: .whitespaces).isEmpty,
               !height.trimmingCharacters(in: .whitespaces).isEmpty
@@ -58,6 +63,14 @@ class SecondRegistrationViewViewModel: ObservableObject {
             errorMessage = "Please, fill in all the fields"
             return false
         }
+        
+        guard let _ = Int(height),
+              let _ = Int(weight)
+        else {
+            errorMessage = "Please, enter the correct weight and height"
+            return false
+        }
+
         
         return true
     }

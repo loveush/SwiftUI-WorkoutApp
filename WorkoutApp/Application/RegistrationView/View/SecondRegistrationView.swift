@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Registration2View: View {
+struct SecondRegistrationView: View {
     @State var weight:String = ""
     @State var height = ""
     @State var name = ""
@@ -28,7 +28,7 @@ struct Registration2View: View {
                         Spacer()
                     }
                     .offset(x:40)
-                    CustomTextField(text: $name, placeholder: "Введите имя..")
+                    CustomTextField(text: $viewModel.name, placeholder: "Введите имя..")
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.none)
                     
@@ -38,7 +38,7 @@ struct Registration2View: View {
                         Spacer()
                     }
                     .offset(x:40)
-                    CustomTextField(text: $height, placeholder: "Введите рост...")
+                    CustomTextField(text: $viewModel.height, placeholder: "Введите рост...")
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.none)
                     
@@ -48,7 +48,7 @@ struct Registration2View: View {
                         Spacer()
                     }
                     .offset(x:40)
-                    CustomTextField(text: $weight, placeholder: "Введите вес...")
+                    CustomTextField(text: $viewModel.weight, placeholder: "Введите вес...")
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.none)
                     
@@ -61,16 +61,7 @@ struct Registration2View: View {
                 Spacer(minLength: 120)
                 
                 TLButton(title: "Завершить", background: Color("darkpink")) {
-                    if viewModel.validate(name: name, weight: weight, height: height) {
-                        if let heightValue = Int(height),
-                           let weightValue = Int(weight) {
-                            viewModel.completeRegistration(name: name,
-                                                           height: heightValue,
-                                                           weight: weightValue)
-                        } else {
-                            viewModel.errorMessage = "Please, enter the correct weight and height"
-                        }
-                    }
+                    viewModel.completeRegistration()
                 }
                 .frame(width: 180, height: 55)
                 
@@ -82,5 +73,5 @@ struct Registration2View: View {
 }
 
 #Preview {
-    Registration2View(viewModel: SecondRegistrationViewViewModel(user: User(id: "", email: "", password: "", name: "", height: 0, weight: 0, joined: 0)))
+    SecondRegistrationView(viewModel: SecondRegistrationViewViewModel(user: User(id: "", email: "", password: "", name: "", height: 0, weight: 0, joined: 0)))
 }

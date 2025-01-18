@@ -3,79 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A721317D2CA319FD00BEAFDE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721317C2CA319FD00BEAFDE /* Extensions.swift */; };
-		A72131812CA4A47D00BEAFDE /* SecondRegistrationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72131802CA4A47D00BEAFDE /* SecondRegistrationViewViewModel.swift */; };
-		A72131832CA5C43A00BEAFDE /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72131822CA5C43A00BEAFDE /* MainViewViewModel.swift */; };
-		A72131872CA6D39600BEAFDE /* OnboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72131862CA6D39600BEAFDE /* OnboardBackground.swift */; };
-		A72131892CA6D4D400BEAFDE /* FirstOnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72131882CA6D4D400BEAFDE /* FirstOnboardView.swift */; };
-		A721318B2CA6DD1700BEAFDE /* CustomNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721318A2CA6DD1700BEAFDE /* CustomNavigationLink.swift */; };
-		A721318D2CA6DEA200BEAFDE /* SecondOnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721318C2CA6DEA200BEAFDE /* SecondOnboardView.swift */; };
-		A72131912CA877F800BEAFDE /* ThirdOnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72131902CA877F800BEAFDE /* ThirdOnboardView.swift */; };
-		A7241AB22CBD986500E6B23D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241AB12CBD986500E6B23D /* Workout.swift */; };
-		A7241AB42CBD9E7E00E6B23D /* WorkoutsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241AB32CBD9E7E00E6B23D /* WorkoutsViewViewModel.swift */; };
-		A7241AB62CBECA7000E6B23D /* WorkoutItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241AB52CBECA7000E6B23D /* WorkoutItemView.swift */; };
-		A7241ABB2CC2F49700E6B23D /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241ABA2CC2F49700E6B23D /* ProfileViewViewModel.swift */; };
 		A7241ABF2CC512BE00E6B23D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7241ABE2CC512BE00E6B23D /* GoogleService-Info.plist */; };
-		A72894A72CA203BF00C19B7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72894A62CA203B700C19B7C /* User.swift */; };
-		A79F96A22CC581CF00A39DE2 /* NewWorkoutItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F96A12CC581CF00A39DE2 /* NewWorkoutItemView.swift */; };
-		A79F96A42CC5822900A39DE2 /* NewWorkoutItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F96A32CC5822900A39DE2 /* NewWorkoutItemViewViewModel.swift */; };
 		A7A949372C9F1D1700EF7504 /* Daily_HelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949362C9F1D1700EF7504 /* Daily_HelperApp.swift */; };
-		A7A949392C9F1D1700EF7504 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949382C9F1D1700EF7504 /* MainView.swift */; };
 		A7A9493B2C9F1D1B00EF7504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A9493A2C9F1D1B00EF7504 /* Assets.xcassets */; };
 		A7A9493E2C9F1D1B00EF7504 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A9493D2C9F1D1B00EF7504 /* Preview Assets.xcassets */; };
 		A7A949482C9F238300EF7504 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A7A949472C9F238300EF7504 /* FirebaseAuth */; };
 		A7A9494A2C9F238300EF7504 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A7A949492C9F238300EF7504 /* FirebaseFirestore */; };
-		A7A949522C9F4B8F00EF7504 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949512C9F4B8F00EF7504 /* ProfileView.swift */; };
-		A7A949542C9F4C4800EF7504 /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949532C9F4C4800EF7504 /* WorkoutsView.swift */; };
-		A7A949582C9F4C7800EF7504 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949572C9F4C7800EF7504 /* LoginView.swift */; };
-		A7A9495A2C9F4C8E00EF7504 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949592C9F4C8E00EF7504 /* RegistrationView.swift */; };
-		A7A9495C2CA0326000EF7504 /* LoginBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9495B2CA0326000EF7504 /* LoginBackgroundView.swift */; };
-		A7A9495E2CA0888100EF7504 /* Registration2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9495D2CA0888100EF7504 /* Registration2View.swift */; };
-		A7A949642CA0943A00EF7504 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949632CA0943A00EF7504 /* TLButton.swift */; };
-		A7A949662CA0999500EF7504 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949652CA0999500EF7504 /* CustomTextField.swift */; };
-		A7A949682CA0B39F00EF7504 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949672CA0B39F00EF7504 /* LoginViewViewModel.swift */; };
-		A7A9496A2CA0BB5300EF7504 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A949692CA0BB5300EF7504 /* CustomSecureField.swift */; };
-		A7A9496C2CA1C14100EF7504 /* RegistrationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A9496B2CA1C14100EF7504 /* RegistrationViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A721317C2CA319FD00BEAFDE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A72131802CA4A47D00BEAFDE /* SecondRegistrationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRegistrationViewViewModel.swift; sourceTree = "<group>"; };
-		A72131822CA5C43A00BEAFDE /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
-		A72131862CA6D39600BEAFDE /* OnboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardBackground.swift; sourceTree = "<group>"; };
-		A72131882CA6D4D400BEAFDE /* FirstOnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnboardView.swift; sourceTree = "<group>"; };
-		A721318A2CA6DD1700BEAFDE /* CustomNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationLink.swift; sourceTree = "<group>"; };
-		A721318C2CA6DEA200BEAFDE /* SecondOnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnboardView.swift; sourceTree = "<group>"; };
-		A72131902CA877F800BEAFDE /* ThirdOnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnboardView.swift; sourceTree = "<group>"; };
-		A7241AB12CBD986500E6B23D /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
-		A7241AB32CBD9E7E00E6B23D /* WorkoutsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewViewModel.swift; sourceTree = "<group>"; };
-		A7241AB52CBECA7000E6B23D /* WorkoutItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutItemView.swift; sourceTree = "<group>"; };
-		A7241ABA2CC2F49700E6B23D /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
 		A7241ABE2CC512BE00E6B23D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A72894A62CA203B700C19B7C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A79F96A12CC581CF00A39DE2 /* NewWorkoutItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutItemView.swift; sourceTree = "<group>"; };
-		A79F96A32CC5822900A39DE2 /* NewWorkoutItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutItemViewViewModel.swift; sourceTree = "<group>"; };
 		A7A949332C9F1D1700EF7504 /* Daily Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A949362C9F1D1700EF7504 /* Daily_HelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_HelperApp.swift; sourceTree = "<group>"; };
-		A7A949382C9F1D1700EF7504 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A7A9493A2C9F1D1B00EF7504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7A9493D2C9F1D1B00EF7504 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A7A949512C9F4B8F00EF7504 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		A7A949532C9F4C4800EF7504 /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
-		A7A949572C9F4C7800EF7504 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		A7A949592C9F4C8E00EF7504 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegistrationView.swift; sourceTree = "<group>"; };
-		A7A9495B2CA0326000EF7504 /* LoginBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBackgroundView.swift; sourceTree = "<group>"; };
-		A7A9495D2CA0888100EF7504 /* Registration2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration2View.swift; sourceTree = "<group>"; };
-		A7A949632CA0943A00EF7504 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
-		A7A949652CA0999500EF7504 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		A7A949672CA0B39F00EF7504 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
-		A7A949692CA0BB5300EF7504 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
-		A7A9496B2CA1C14100EF7504 /* RegistrationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A7018EE12D3C49900080A66F /* Application */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Application; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A7A949302C9F1D1700EF7504 /* Frameworks */ = {
@@ -90,30 +42,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A7241AB72CBEE68900E6B23D /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				A72131902CA877F800BEAFDE /* ThirdOnboardView.swift */,
-				A721318C2CA6DEA200BEAFDE /* SecondOnboardView.swift */,
-				A72131882CA6D4D400BEAFDE /* FirstOnboardView.swift */,
-				A72131862CA6D39600BEAFDE /* OnboardBackground.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		A7241AB82CBEE6FF00E6B23D /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				A7A949692CA0BB5300EF7504 /* CustomSecureField.swift */,
-				A7A9495D2CA0888100EF7504 /* Registration2View.swift */,
-				A7A949592C9F4C8E00EF7504 /* RegistrationView.swift */,
-				A7A949572C9F4C7800EF7504 /* LoginView.swift */,
-				A7A9495B2CA0326000EF7504 /* LoginBackgroundView.swift */,
-				A7A949652CA0999500EF7504 /* CustomTextField.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		A7A9492A2C9F1D1700EF7504 = {
 			isa = PBXGroup;
 			children = (
@@ -133,10 +61,8 @@
 		A7A949352C9F1D1700EF7504 /* WorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				A7018EE12D3C49900080A66F /* Application */,
 				A7A949502C9F49EC00EF7504 /* Other */,
-				A7A9494F2C9F49C600EF7504 /* Models */,
-				A7A9494E2C9F49BB00EF7504 /* ViewModels */,
-				A7A9494D2C9F49B300EF7504 /* Views */,
 				A7A9493C2C9F1D1B00EF7504 /* Preview Content */,
 			);
 			path = WorkoutApp;
@@ -148,45 +74,6 @@
 				A7A9493D2C9F1D1B00EF7504 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		A7A9494D2C9F49B300EF7504 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A7A949382C9F1D1700EF7504 /* MainView.swift */,
-				A7A949512C9F4B8F00EF7504 /* ProfileView.swift */,
-				A7241AB52CBECA7000E6B23D /* WorkoutItemView.swift */,
-				A7A949532C9F4C4800EF7504 /* WorkoutsView.swift */,
-				A79F96A12CC581CF00A39DE2 /* NewWorkoutItemView.swift */,
-				A7241AB72CBEE68900E6B23D /* Onboarding */,
-				A7241AB82CBEE6FF00E6B23D /* Login */,
-				A7A949632CA0943A00EF7504 /* TLButton.swift */,
-				A721318A2CA6DD1700BEAFDE /* CustomNavigationLink.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		A7A9494E2C9F49BB00EF7504 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				A7A949672CA0B39F00EF7504 /* LoginViewViewModel.swift */,
-				A72131822CA5C43A00BEAFDE /* MainViewViewModel.swift */,
-				A7241ABA2CC2F49700E6B23D /* ProfileViewViewModel.swift */,
-				A7241AB32CBD9E7E00E6B23D /* WorkoutsViewViewModel.swift */,
-				A79F96A32CC5822900A39DE2 /* NewWorkoutItemViewViewModel.swift */,
-				A7A9496B2CA1C14100EF7504 /* RegistrationViewViewModel.swift */,
-				A72131802CA4A47D00BEAFDE /* SecondRegistrationViewViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		A7A9494F2C9F49C600EF7504 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A72894A62CA203B700C19B7C /* User.swift */,
-				A7241AB12CBD986500E6B23D /* Workout.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		A7A949502C9F49EC00EF7504 /* Other */ = {
@@ -214,6 +101,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A7018EE12D3C49900080A66F /* Application */,
 			);
 			name = "Daily Helper";
 			packageProductDependencies = (
@@ -278,34 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7A9495E2CA0888100EF7504 /* Registration2View.swift in Sources */,
-				A7A949662CA0999500EF7504 /* CustomTextField.swift in Sources */,
-				A72131912CA877F800BEAFDE /* ThirdOnboardView.swift in Sources */,
-				A79F96A22CC581CF00A39DE2 /* NewWorkoutItemView.swift in Sources */,
-				A7241AB42CBD9E7E00E6B23D /* WorkoutsViewViewModel.swift in Sources */,
-				A7241AB22CBD986500E6B23D /* Workout.swift in Sources */,
-				A72131832CA5C43A00BEAFDE /* MainViewViewModel.swift in Sources */,
-				A7A949582C9F4C7800EF7504 /* LoginView.swift in Sources */,
-				A7A949642CA0943A00EF7504 /* TLButton.swift in Sources */,
-				A7A949542C9F4C4800EF7504 /* WorkoutsView.swift in Sources */,
-				A7A949392C9F1D1700EF7504 /* MainView.swift in Sources */,
-				A72131812CA4A47D00BEAFDE /* SecondRegistrationViewViewModel.swift in Sources */,
-				A72894A72CA203BF00C19B7C /* User.swift in Sources */,
-				A7241AB62CBECA7000E6B23D /* WorkoutItemView.swift in Sources */,
-				A72131872CA6D39600BEAFDE /* OnboardBackground.swift in Sources */,
-				A721318D2CA6DEA200BEAFDE /* SecondOnboardView.swift in Sources */,
-				A7A9496C2CA1C14100EF7504 /* RegistrationViewViewModel.swift in Sources */,
-				A7A9495A2C9F4C8E00EF7504 /* RegistrationView.swift in Sources */,
-				A7A9496A2CA0BB5300EF7504 /* CustomSecureField.swift in Sources */,
-				A79F96A42CC5822900A39DE2 /* NewWorkoutItemViewViewModel.swift in Sources */,
-				A72131892CA6D4D400BEAFDE /* FirstOnboardView.swift in Sources */,
-				A7A949682CA0B39F00EF7504 /* LoginViewViewModel.swift in Sources */,
 				A721317D2CA319FD00BEAFDE /* Extensions.swift in Sources */,
-				A721318B2CA6DD1700BEAFDE /* CustomNavigationLink.swift in Sources */,
-				A7A949522C9F4B8F00EF7504 /* ProfileView.swift in Sources */,
-				A7241ABB2CC2F49700E6B23D /* ProfileViewViewModel.swift in Sources */,
 				A7A949372C9F1D1700EF7504 /* Daily_HelperApp.swift in Sources */,
-				A7A9495C2CA0326000EF7504 /* LoginBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +302,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Daily Helper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WorkoutApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Daily Helper";
@@ -466,7 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Daily Helper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WorkoutApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Daily Helper";

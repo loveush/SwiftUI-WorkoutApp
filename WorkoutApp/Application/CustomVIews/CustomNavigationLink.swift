@@ -16,6 +16,7 @@ struct CustomNavigationLink<Destination: View>: View {
                     .foregroundColor(Color(.white))
             }
         }
+        .frame(width: 180, height: 55)
         .buttonStyle(PlainButtonStyle())
     }
 }

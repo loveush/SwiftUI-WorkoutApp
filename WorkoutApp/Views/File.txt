@@ -1,0 +1,10 @@
+NavigationView {
+            VStack {
+                NavigationLink(destination: YourNextView()) { // Destination view
+                    TLButton(title: "Далее", background: Color("darkpink")) {
+                        viewModel.register()
+                    }
+                    .frame(width: 180, height: 55)
+                }
+            }
+        }

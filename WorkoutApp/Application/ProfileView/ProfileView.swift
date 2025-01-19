@@ -92,10 +92,9 @@ struct ProfileView: View {
                         Spacer()
                         
                     } else {
-                        Text("Loading profile...")
-                            .font(.largeTitle)
-                            .foregroundStyle(Color("darkpink"))
-                            .opacity(0.5)
+                        ProgressView()
+                          .progressViewStyle(CircularProgressViewStyle(tint: .darkpink))
+                          .scaleEffect(2.0, anchor: .center)
                     }
                     
                 }

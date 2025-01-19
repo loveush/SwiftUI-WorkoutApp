@@ -14,6 +14,8 @@ class WorkoutsViewViewModel: ObservableObject {
     @Published var showingEditWorkoutItemView = false
     @Published var currentWorkouts: [Workout] = []
 
+    init() {}
+    
     var currentDayWorkouts: [Workout] {
         let startOfDay = Calendar.current.startOfDay(for: date)
         let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
@@ -23,7 +25,17 @@ class WorkoutsViewViewModel: ObservableObject {
         }
     }
     
-    init() {}
+    func hasWorkouts(day: Date) -> Bool {
+        return currentWorkouts.contains { workout in
+            let startOfDay = Calendar.current.startOfDay(for: day)
+            let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
+            return workout.startDate >= startOfDay && workout.startDate < endOfDay
+        }
+    }
+    
+    func addToMonth(value: Int) {
+        date = Calendar.current.date(byAdding: .month, value: value, to: date) ?? date
+    }
     
     func fetchWorkouts(for userId: String) {
         let db = Firestore.firestore()
@@ -38,7 +50,7 @@ class WorkoutsViewViewModel: ObservableObject {
                     return
                 }
 
-                // Parse the documents into your `Workout` model manually
+                // Parse the documents into Workout model manually
                 self.currentWorkouts = documents.compactMap { (document) -> Workout? in
                     let data = document.data()
                     guard let name = data["name"] as? String,

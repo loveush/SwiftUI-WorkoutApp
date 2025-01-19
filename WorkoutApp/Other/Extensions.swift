@@ -18,6 +18,7 @@ extension Encodable {
         }
     }
 }
+
 extension Date {
     static var firstDayOfWeek = Calendar.current.firstWeekday
     
@@ -105,5 +106,9 @@ extension Date {
     }
     var startOfDay: Date {
         Calendar.current.startOfDay(for: self)
+    }
+    
+    var formattedDate: String {
+        "\(self.dayInt).\(self.monthInt).\(self.yearInt)"
     }
 }

@@ -1,9 +1,6 @@
 import SwiftUI
 
 struct WorkoutsView: View {
-    
-    let daysOfWeek = Date.capitalizedFirstLettersOfWeekdays
-    let columns = Array(repeating: GridItem(.flexible()), count: 7)
     @State private var days: [Date] = []
     
     @StateObject var viewModel = WorkoutsViewViewModel()
@@ -24,88 +21,40 @@ struct WorkoutsView: View {
                     HStack {
                         Text("Workouts")
                             .font(.title)
-                            .foregroundStyle(Color("text"))
+                            .foregroundStyle(.text)
                         Spacer()
                         
-                        DatePicker("", selection: $viewModel.date, displayedComponents: .date)
-                            .labelsHidden()
+                        Button {
+                            viewModel.date = Date.now
+                        } label: {
+                            Text(Date.now.formattedDate)
+                                .font(.system(size: 20))
+                        }
                     }
                     .offset(y:10)
                     .padding(.horizontal, 30)
                     
                     // Calendar view
-                    VStack {
-                        HStack {
-                            ForEach(daysOfWeek, id: \.self) { dayOfWeek in
-                                Text(dayOfWeek)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(Color("text"))
-                                    .frame(maxWidth: .infinity)
-                                    .opacity(0.6)
-                            }
-                        }
-                        Divider()
-                            .frame(minHeight: 1)
-                            .background(Color("pink"))
-                        
-                        LazyVGrid(columns: columns) {
-                            ForEach(days, id: \.self) { day in
-                                if day.monthInt != viewModel.date.monthInt {
-                                    Text("")
-                                } else {
-                                    let hasWorkouts = viewModel.currentWorkouts.contains { workout in
-                                        let startOfDay = Calendar.current.startOfDay(for: day)
-                                        let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
-                                        return workout.startDate >= startOfDay && workout.startDate < endOfDay
-                                    }
-                                    
-                                    Text(day.formatted(.dateTime.day()))
-                                        .font(.system(size: 18))
-                                        .foregroundStyle(Color("text"))
-                                        .frame(maxWidth: .infinity, minHeight: 35)
-                                        .background(
-                                            day.startOfDay == Date.now.startOfDay ?
-                                            Circle()
-                                                .fill(Color("pink"))
-                                                .frame(width: 40, height: 40)
-                                                .opacity(0.6)
-                                                .shadow(radius: 2, y: 2) : nil
-                                        )
-                                        .background(
-                                            viewModel.date == day ?
-                                            Circle()
-                                                .fill(Color("pink"))
-                                                .frame(width: 40, height: 40)
-                                                .opacity(0.4): nil
-                                        )
-                                        .overlay(alignment: .top) {
-                                            if hasWorkouts {
-                                                Circle()
-                                                    .fill(Color.white)
-                                                    .frame(width: 8, height: 8)
-                                            }
-                                        }
-                                        .onTapGesture {
-                                            viewModel.date = day
-                                        }
+                    CalendarView(days: $days, viewModel: viewModel)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                            .onEnded { value in
+                                if value.translation.width < 0 {
+                                    viewModel.addToMonth(value: 1)
+                                }
+                                
+                                if value.translation.width > 0 {
+                                    viewModel.addToMonth(value: -1)
                                 }
                             }
-                        }
-                    }
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color("darkpink"))
-                    )
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 10)
+                        )
                     
                     // Workouts panel
                     HStack {
                         Text("Plan for the day:")
                             .font(.title3)
                             .foregroundStyle(Color("text"))
-                        
                         Spacer()
                         
                         // Add workout button
@@ -128,14 +77,14 @@ struct WorkoutsView: View {
                     // Workouts list
                     if viewModel.currentDayWorkouts.isEmpty {
                         Spacer()
-                        Text("Add a workout")
-                            .font(.largeTitle)
-                            .foregroundStyle(Color("darkpink"))
+                        Text("You have no workouts")
+                            .font(.system(size: 30))
+                            .foregroundStyle(.darkpink)
                             .opacity(0.5)
-                        Image(systemName: "plus.viewfinder")
+                        Image(systemName: "figure.gymnastics")
                             .resizable()
-                            .frame(width: 50, height: 50)
-                            .foregroundStyle(Color("darkpink"))
+                            .frame(width: 40, height: 40)
+                            .foregroundStyle(.darkpink)
                             .opacity(0.5)
                         Spacer()
                     } else {

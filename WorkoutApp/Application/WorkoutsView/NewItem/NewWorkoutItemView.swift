@@ -152,6 +152,6 @@ struct NewWorkoutItemView: View {
 #Preview {
     NewWorkoutItemView(
         date: Date(),
-        newWorkoutItemPresented: .constant(true) // Pass constant binding for preview
+        newWorkoutItemPresented: .constant(true) 
     )
 }
